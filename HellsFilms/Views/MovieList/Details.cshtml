@@ -1,0 +1,44 @@
+﻿@model HellsFilmsMovie
+
+<!-- main-area -->
+<main>
+
+    <!-- movie-details-area -->
+    <section class="movie-details-area" data-background="/img/bg/movie_bg.jpg">
+        <div class="container">
+            <div class="row align-items-center position-relative">
+                <div class="col-xl-3 col-lg-4">
+                    <div class="movie-details-img">
+                        <img src="@Model.HellsFilmsMoviePhoto" height="430" width="303" alt="">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-8">
+                    <div class="movie-details-content">
+                        <h2>@Model.HellsFilmsMovieName</h2>
+                        <div class="banner-meta">
+                            <ul>
+                                <li class="quality">
+                                    <span>Pg 18</span>
+                                    <span>hd</span>
+                                </li>
+                                <li class="release-time">
+                                    <span><i class="far fa-calendar-alt"></i> @Model.HellsFilmsMovieDate</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs">
+                            <div class="kinobox_player"></div>
+                            <script src="https://kinobox.tv/kinobox.min.js"></script>
+                            <script>new Kinobox('.kinobox_player', { search: { kinopoisk: '@Model.HellsFilmsMovieIDFilms' } }).init();</script>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
